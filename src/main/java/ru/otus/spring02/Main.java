@@ -6,13 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import ru.otus.spring02.domain.Person;
 import ru.otus.spring02.service.PersonService;
 
-@Configuration
-@ComponentScan
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(Main.class);
+        AnnotationConfigApplicationContext context = null;
 
         PersonService service = context.getBean(PersonService.class);
 
